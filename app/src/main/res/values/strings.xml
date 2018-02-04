@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HigherOrLower</string>
+    <string name="no_input">Please enter number here</string>
+</resources>
