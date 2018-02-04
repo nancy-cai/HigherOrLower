@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HigherOrLower</string>
     <string name="no_input">Please enter number here</string>
+    <string name="game_title">Hi I have a number between 1 to 20 in my mind, guess which number it is</string>
 </resources>

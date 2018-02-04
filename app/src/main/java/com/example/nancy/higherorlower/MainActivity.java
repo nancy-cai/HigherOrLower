@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class MainActivity extends AppCompatActivity {
 
     public Integer randomNo;
+    public EditText inputNo;
 
 
     public void randomNo(){
@@ -47,12 +48,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void compareNo(View view){
 
-        EditText inputNo = (EditText) findViewById(R.id.numberInput);
+        inputNo = (EditText) findViewById(R.id.numberInput);
         String inputNumber = inputNo.getText().toString();
 
         if(isInputNumberValidInt(inputNumber)){
             int intNumber = Integer.parseInt(inputNumber);
             compareLogic(intNumber);
+        }else{
+            inputNo.setError("Please enter a whole number between 1 to 20");
         }
     }
 
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             makeToast("Guess lower");
         }else if(number==randomNo){
             showPlayAgainAlert();
+            inputNo.setText("");
         }else if(number<randomNo){
             makeToast("Guess higher");
         }
@@ -73,12 +77,10 @@ public class MainActivity extends AppCompatActivity {
         try {
             number=Integer.parseInt(input);
         } catch (Exception e) {
-            showInvalidNoAlert();
             return false;
         }
 
         if (number < 1 || number > 20) {
-            showInvalidNoAlert();
             return false;
         }
 

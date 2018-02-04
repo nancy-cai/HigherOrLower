@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="@string/no_input"
         android:inputType="textEmailAddress" />
@@ -27,5 +27,18 @@
         android:layout_marginTop="42dp"
         android:onClick="compareNo"
         android:text="Guess" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:fontFamily="serif"
+        android:paddingLeft="20dp"
+        android:text="@string/game_title"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp" />
 
 </RelativeLayout>
